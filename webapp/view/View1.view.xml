@@ -5,11 +5,13 @@
 			<Page title="{i18n>title}" class="myBackgroundStyle">
 				<content>
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<FlexBox height="200px" alignItems="Center" justifyContent="Center"></FlexBox>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
 							<items>
 								<Image id="imgHappy" src="./assets/happyface.gif" densityAware="true" width="200px" press="onPress"></Image>
 								<Image id="imgOK" src="./assets/okface.png" densityAware="true" width="200px" press="onPress"></Image>
 								<Image id="imgSad" src="./assets/sadface.png" densityAware="true" width="200px" press="onPress"></Image>
+								<viz:VizFrame xmlns="sap.viz" id="idpiechart" vizType="pie"/>
 							</items>
 						</FlexBox>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
@@ -18,10 +20,14 @@
 							<Button id="btnOK" icon="sap-icon://accept" text="OK" press="onPress"></Button>
 							<Button id="btnSad" icon="sap-icon://error" type="Reject" text="Sad" press="onPress"></Button>
 						</FlexBox>
-						<MessageStrip type="Info" showIcon="true" text="Share a success story anonymously."/>
+						<MessageStrip type="Info" showIcon="true" text="Share a success story anonymously."></MessageStrip>
 						<TextArea placeholder="Enter Text... example: Today the go live was great!" growing="true" growingMaxLines="7" width="100%"/>
+						<FlexBox  alignItems="Center" justifyContent="Center">
+							<Button id="btnSend" icon="sap-icon://paper-plane" text="Send" press="onPress"></Button>
+						</FlexBox>
 						<l:HorizontalLayout class="sapUiContentPadding"></l:HorizontalLayout>
 					</l:VerticalLayout>
+					<!--THE TILES ARE PERFECT FOR RESPONSIVENESS; BUT THE BACKGROUND PICTURE REQUIRES MORE WORK...-->
 					<GenericTile id="tileHappy" backgroundImage="./assets/happyface.gif" frameType="OneByOne" press="onPress">
 						<TileContent footer="Happy">
 							<!--<NewsContent-->
@@ -35,7 +41,6 @@
 					<GenericTile id="tileSad" backgroundImage="./assets/sadface.gif" frameType="OneByOne" press="onPress">
 						<TileContent footer="OK"></TileContent>
 					</GenericTile>
-					<viz:VizFrame xmlns="sap.viz" id="idpiechart" vizType="pie"/>
 				</content>
 			</Page>
 		</pages>
