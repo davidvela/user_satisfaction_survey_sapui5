@@ -1,0 +1,43 @@
+<mvc:View controllerName="ussat.user_satisfaction_survey_sapui5.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}" class="myBackgroundStyle">
+				<content>
+					<l:VerticalLayout class="sapUiContentPadding" width="100%">
+						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
+							<items>
+								<Image id="imgHappy" src="./assets/happyface.gif" densityAware="true" width="200px" press="onPress"></Image>
+								<Image id="imgOK" src="./assets/okface.png" densityAware="true" width="200px" press="onPress"></Image>
+								<Image id="imgSad" src="./assets/sadface.png" densityAware="true" width="200px" press="onPress"></Image>
+							</items>
+						</FlexBox>
+						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
+							<!--<Button id="btnHappy" icon="sap-icon://BusinessSuiteInAppSymbols/icon-face-happy" text="Happy" press="onPress"></Button>-->
+							<Button id="btnHappy" icon="sap-icon://favorite" type="Accept" text="Happy" press="onPress"></Button>
+							<Button id="btnOK" icon="sap-icon://accept" text="OK" press="onPress"></Button>
+							<Button id="btnSad" icon="sap-icon://error" type="Reject" text="Sad" press="onPress"></Button>
+						</FlexBox>
+						<MessageStrip type="Info" showIcon="true" text="Share a success story anonymously."/>
+						<TextArea placeholder="Enter Text... example: Today the go live was great!" growing="true" growingMaxLines="7" width="100%"/>
+						<l:HorizontalLayout class="sapUiContentPadding"></l:HorizontalLayout>
+					</l:VerticalLayout>
+					<GenericTile id="tileHappy" backgroundImage="./assets/happyface.gif" frameType="OneByOne" press="onPress">
+						<TileContent footer="Happy">
+							<!--<NewsContent-->
+							<!--	contentText="Happy content"-->
+							<!--	subheader="Happy" />-->
+						</TileContent>
+					</GenericTile>
+					<GenericTile id="tileOK" backgroundImage="./assets/neutralface.png" frameType="OneByOne" press="onPress">
+						<TileContent footer="OK"></TileContent>
+					</GenericTile>
+					<GenericTile id="tileSad" backgroundImage="./assets/sadface.gif" frameType="OneByOne" press="onPress">
+						<TileContent footer="OK"></TileContent>
+					</GenericTile>
+					<viz:VizFrame xmlns="sap.viz" id="idpiechart" vizType="pie"/>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
