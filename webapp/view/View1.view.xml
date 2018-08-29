@@ -23,6 +23,9 @@
 						</FlexBox>
 						<MessageStrip type="Info" showIcon="true" text="Share a success story anonymously."></MessageStrip>
 						<TextArea placeholder="Enter Text... example: Today the go live was great!" growing="true" growingMaxLines="7" width="100%"/>
+						<l:VerticalLayout id="idVerticalLayout" class="sapUiContentPadding" width="100%"></l:VerticalLayout>
+
+
 						<FlexBox  alignItems="Center" justifyContent="Center">
 							<Button id="btnSend" icon="sap-icon://paper-plane" text="Send" press="onPress"></Button>
 						</FlexBox>
