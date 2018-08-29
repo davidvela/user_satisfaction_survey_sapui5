@@ -35,16 +35,30 @@ sap.ui.define([
 				return;
 			}
 
-			data["DataToday"][index]["value"] = parseInt(data["DataToday"][index]["value"]) + 1;
+			data["DataToday"][index]["value"] = String( parseInt(data["DataToday"][index]["value"]) + 1 ); 
 
-			oModel.setData(data);
+			oModel.setData(	data);
 			var oVizFrame = this.getView().byId("idpiechart");
 
 			MessageToast.show(evt.getSource().getId() + " Pressed");
 			oVizFrame.setModel(oModel);
+
+			var value =	 { "value" : parseInt( data["DataToday"][0]["value"] )  } 
+			var happytile1 = this.getView().byId("happytile1");
+			var oModel1 = new sap.ui.model.json.JSONModel();
+			oModel1.setData( value )
+			happytile1.setModel(oModel1);
 		},
 
 		onInit: function (evt) {
+			var value =	 { "value" : parseInt( data["DataToday"][0]["value"]) } 
+			var happytile1 = this.getView().byId("happytile1");
+			var oModel1 = new sap.ui.model.json.JSONModel();
+			oModel1.setData( value )
+			happytile1.setModel(oModel1);
+
+			
+			
 			// example from http://www.saplearners.com/pie-chart-using-vizframe-sap-viz-ui5-controls-in-sapui5/
 			//      1.Get the id of the VizFrame		
 			var oVizFrame = this.getView().byId("idpiechart");
