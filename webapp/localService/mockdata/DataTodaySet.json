@@ -1,0 +1,13 @@
+[{
+	"status": "happy",
+	"value": "20",
+	"Happy": "20",
+	"Ok": "30",
+	"Sad": "5"
+}, {
+	"status": "ok ",
+	"value": "5"
+}, {
+	"status": "sad",
+	"value": "5"
+}]
