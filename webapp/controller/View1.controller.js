@@ -16,7 +16,16 @@ sap.ui.define([
 		}]
 	};
 	return Controller.extend("ussat.user_satisfaction_survey_sapui5.controller.View1", {
-
+		onStatPress: function(evt){
+			//var hi =(name)=>{ return "hello  "+name }
+			//MessageToast.show(hi("World"));
+			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			//this.getRouter().
+			oRouter.navTo("statsRoute" 
+				// { objectId: oItem.getBindingContext().getProperty("status")}
+			);	
+				
+		}, 
 		onPress: function (evt) {
 			// send the response to the server ... 
 			var oModel = new sap.ui.model.json.JSONModel();

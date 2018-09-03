@@ -9,6 +9,16 @@
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
+		"dataSources": {
+			"data": {
+				"uri": "/here/goes/your/serviceurl/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		},
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
@@ -60,6 +70,12 @@
 				"settings": {
 					"bundleName": "ussat.user_satisfaction_survey_sapui5.i18n.i18n"
 				}
+			}, 
+			"data": {
+				"dataSource": "data",
+				"settings": {
+					"defaultCountMode": "Inline"
+				}
 			}
 		},
 		"resources": {
@@ -81,13 +97,23 @@
 				"name": "RouteView1",
 				"pattern": "RouteView1",
 				"target": ["TargetView1"]
-			}],
+			}, {
+				"name": "statsRoute",
+				"pattern": "stats",
+				"target": ["statsTarget"]
+			}	],
 			"targets": {
 				"TargetView1": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "View1"
+				}, 
+				"statsTarget": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "Stats"
 				}
 			}
 		}
