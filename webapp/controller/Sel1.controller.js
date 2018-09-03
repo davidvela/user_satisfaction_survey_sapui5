@@ -3,6 +3,7 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function (MessageToast, Controller) {
 	"use strict";
+<<<<<<< HEAD
 	return Controller.extend("ess.empsatsur1.Sel1", {
 
 		onPress: function (evt) {
@@ -19,6 +20,14 @@ sap.ui.define([
 			}
 			
 		},
+=======
+	return Controller.extend("ussat.user_satisfaction_survey_sapui5.controller.Sel1", {
+
+		onPress: function (evt) {
+			MessageToast.show(evt.getSource().getId() );
+		},
+
+>>>>>>> refs/heads/master
 		onInit: function (evt) {
 			// var value =	 { "value" : parseInt( data["DataToday"][0]["value"]) } 
 			// var happytile1 = this.getView().byId("happytile1");

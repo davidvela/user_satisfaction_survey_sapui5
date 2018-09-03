@@ -3,7 +3,11 @@ sap.ui.define([
 	"sap/ui/core/mvc/Controller"
 ], function (MessageToast, Controller) {
 	"use strict";
+<<<<<<< HEAD
 	return Controller.extend("ess.empsatsur1.Home", {
+=======
+	return Controller.extend("ussat.user_satisfaction_survey_sapui5.controller.Home", {
+>>>>>>> refs/heads/master
 
 		onPress: function (evt) {
 			MessageToast.show(evt.getSource().getId() );

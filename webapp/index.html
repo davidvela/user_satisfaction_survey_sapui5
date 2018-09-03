@@ -12,6 +12,7 @@
 			data-sap-ui-libs="sap.m"
 			data-sap-ui-theme="sap_belize_plus"
 			data-sap-ui-compatVersion="edge"
+<<<<<<< HEAD
 			data-sap-ui-resourceroots='{"ess.empsatsur1": "./"}'>
 		</script>
 
@@ -23,6 +24,19 @@
 					app: new sap.ui.core.ComponentContainer({
 						height : "100%",
 						name : "ess.empsatsur1"
+=======
+			data-sap-ui-resourceroots='{"ussat.user_satisfaction_survey_sapui5": "./"}'>
+		</script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "ussat.user_satisfaction_survey_sapui5"
+>>>>>>> refs/heads/master
 					})
 				}).placeAt("content");
 			});
