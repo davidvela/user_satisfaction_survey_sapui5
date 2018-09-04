@@ -3,9 +3,9 @@
 	<App id="idAppControl">
 		<pages>
 			<Page title="How was your day?" class="myBackgroundStyle">
-				<content>
+				<content> 
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
-						<Button  icon="sap-icon://favorite" type="Accept" text="home" press="onPress"></Button>
+						<Button  icon="sap-icon://favorite" type="Accept" text="home s" press="onPress"></Button>
 						<l:HorizontalLayout class="sapUiContentPadding"></l:HorizontalLayout>
 					</l:VerticalLayout>
 				</content>
