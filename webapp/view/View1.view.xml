@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <mvc:View controllerName="ess.empsatsur1.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls">
 	<App id="idAppControl">
@@ -11,20 +10,6 @@
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<Label id="labelInForm" displayOnly="true" wrapping="true" text="Share with us how was your day =) 😎😀😊😔😡🤢💩 "/>
 						<Label text="Happy:"/><Label text="{/Happy}"/> 
-						
-=======
-<mvc:View controllerName="ussat.user_satisfaction_survey_sapui5.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:viz="sap.viz.ui5.controls">
-	<App id="idAppControl">
-		<pages>
-			<Page title="{i18n>title}" class="myBackgroundStyle" >
-			<headerContent>
-				<Button icon="sap-icon://pie-chart" tooltip="Statistics" press="onStatPress" />
-			</headerContent>
-				<content>
-					<l:VerticalLayout class="sapUiContentPadding" width="100%">
-						<Label id="labelInForm" displayOnly="true" wrapping="true" text="Share with us how was your day =) 😎😀😊😔😡🤢💩 "/>
->>>>>>> refs/heads/master
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center"></FlexBox>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
 							<items>

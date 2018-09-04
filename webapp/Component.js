@@ -1,20 +1,10 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-<<<<<<< HEAD
 	"ess/empsatsur1/model/models"
 ], function (UIComponent, Device, models) {
 	"use strict";
-
 	return UIComponent.extend("ess.empsatsur1.Component", {
-=======
-	"ussat/user_satisfaction_survey_sapui5/model/models"
-], function (UIComponent, Device, models) {
-	"use strict";
-
-	return UIComponent.extend("ussat.user_satisfaction_survey_sapui5.Component", {
->>>>>>> refs/heads/master
-
 		metadata: {
 			manifest: "json"
 		},

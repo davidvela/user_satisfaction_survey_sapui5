@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <mvc:View controllerName="ess.empsatsur1.controller.Sel1" xmlns:html="http://www.w3.org/1999/xhtml"
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<App id="idAppControl">
@@ -10,17 +9,6 @@
 						<l:HorizontalLayout class="sapUiContentPadding">
 							<Label text="Happy: {/Happy}"/>
 						</l:HorizontalLayout>
-=======
-<mvc:View controllerName="ussat.user_satisfaction_survey_sapui5.controller.Sel1" xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
-	<App id="idAppControl">
-		<pages>
-			<Page title="How was your day?" class="myBackgroundStyle">
-				<content>
-					<l:VerticalLayout class="sapUiContentPadding" width="100%">
-						<Button  icon="sap-icon://favorite" type="Accept" text="selection" press="onPress"></Button>
-						<l:HorizontalLayout class="sapUiContentPadding"></l:HorizontalLayout>
->>>>>>> refs/heads/master
 					</l:VerticalLayout>
 				</content>
 			</Page>

@@ -7,12 +7,9 @@
                 </Key>
                 <Property Name="status" Nullable="false" Type="Edm.String"/>
                 <Property Name="value" Type="Edm.String"/>
-<<<<<<< HEAD
                 <Property Name="Happy" Type="Edm.String"/>
                 <Property Name="Ok" Type="Edm.String"/>
                 <Property Name="Sad" Type="Edm.String"/>
-=======
->>>>>>> refs/heads/master
             </EntityType>
             <EntityContainer Name="default" m:IsDefaultEntityContainer="true">
                 <EntitySet EntityType="myData.DataToday" Name="DataTodaySet"/>

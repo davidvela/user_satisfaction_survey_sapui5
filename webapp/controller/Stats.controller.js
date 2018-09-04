@@ -4,12 +4,7 @@ sap.ui.define([
 	"sap/ui/core/routing/History"
 ], function (MessageToast, Controller, History) {
 	"use strict";
-<<<<<<< HEAD
 	return Controller.extend("ess.empsatsur1.Stats", {
-=======
-	return Controller.extend("ussat.user_satisfaction_survey_sapui5.controller.Stats", {
->>>>>>> refs/heads/master
-
 		onPress: function (evt) {
 			MessageToast.show(evt.getSource().getId() );
 		},

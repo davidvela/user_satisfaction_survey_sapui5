@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <mvc:View controllerName="ess.empsatsur1.controller.Stats" xmlns:html="http://www.w3.org/1999/xhtml"
-=======
-<mvc:View controllerName="ussat.user_satisfaction_survey_sapui5.controller.Stats" xmlns:html="http://www.w3.org/1999/xhtml"
->>>>>>> refs/heads/master
 	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<App id="idAppControl">
 		<pages>
