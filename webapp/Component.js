@@ -6,7 +6,6 @@ sap.ui.define([
 	"use strict";
 
 	return UIComponent.extend("ess.empsatsur1.Component", {
-
 		metadata: {
 			manifest: "json"
 		},

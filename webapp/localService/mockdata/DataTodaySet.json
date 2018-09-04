@@ -1,9 +1,20 @@
 [{
 	"status": "happy",
+<<<<<<< HEAD
 	"value": "20",
 	"Happy": "20",
 	"Ok": "30",
 	"Sad": "5"
+=======
+<<<<<<< HEAD
+	"value": "20",
+	"Happy": "20",
+	"Ok": "30",
+	"Sad": "5"
+=======
+	"value": "20"
+>>>>>>> refs/heads/master
+>>>>>>> refs/heads/master
 }, {
 	"status": "ok ",
 	"value": "5"
