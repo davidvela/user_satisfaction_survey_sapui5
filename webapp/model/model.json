@@ -1,0 +1,12 @@
+{	
+	'DataToday': [{
+		"status": "Happy",
+		"value": "20"
+	}, {
+		"status": "Ok",
+		"value": "10"
+	}, {
+		"status": "Sad",
+		"value": "2"
+	}]
+}
