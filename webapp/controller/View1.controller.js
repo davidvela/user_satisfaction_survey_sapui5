@@ -205,11 +205,7 @@ sap.ui.define([
 					// oStatsModel.setProperty("/detractors", Number(oData.Detractors));
 				}.bind(this)
 			} );
-<<<<<<< HEAD
-			
-=======
 
->>>>>>> refs/heads/master
 		}
 
 	});

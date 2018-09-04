@@ -4,22 +4,12 @@
 		<pages>
 			<Page title="{i18n>title}" class="myBackgroundStyle" >
 			<headerContent>
-<<<<<<< HEAD
 				<Button icon="sap-icon://pie-chart" tooltip="Statistics" press="onStatPress" />
 			</headerContent>
 				<content>
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<Label id="labelInForm" displayOnly="true" wrapping="true" text="Share with us how was your day =) 😎😀😊😔😡🤢💩 "/>
-						<Label text="Happy:"/><Label text="{/Happy}"/> 
-						
-=======
-				<Button icon="sap-icon://pie-chart" tooltip="Statistics " press="onStatPress" />
-			</headerContent>
-				<content>
-					<l:VerticalLayout class="sapUiContentPadding" width="100%">
-						<Label id="labelInForm" displayOnly="true" wrapping="true" text="Share with us how was your day =) 😎😀😊😔😡🤢💩 "/>
-						<Label text="Happy:"/><Label text="{/Happy}"/> 
->>>>>>> refs/heads/master
+						<Label text="Happy:"/><Label text="{/Happy}"/>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center"></FlexBox>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
 							<items>
