@@ -25,6 +25,12 @@ sap.ui.define([
 				// { objectId: oItem.getBindingContext().getProperty("status")}
 			);	
 		}, 
+		onSel1Press: function(evt){
+			sap.ui.core.UIComponent.getRouterFor(this).navTo("sel1Route");
+		},
+		onHomePress: function(evt){
+			sap.ui.core.UIComponent.getRouterFor(this).navTo("homeRoute");
+		},
 		onPress: function (evt) {
 			// send the response to the server ... 
 			var oModel = new sap.ui.model.json.JSONModel();

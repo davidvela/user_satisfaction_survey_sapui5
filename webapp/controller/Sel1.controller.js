@@ -1,7 +1,8 @@
 sap.ui.define([
 	"sap/m/MessageToast",
-	"sap/ui/core/mvc/Controller"
-], function (MessageToast, Controller) {
+	"sap/ui/core/mvc/Controller", 
+	"sap/ui/core/routing/History"
+], function (MessageToast, Controller, History) {
 	"use strict";
 	return Controller.extend("ess.empsatsur1.Sel1", {
 
@@ -17,7 +18,6 @@ sap.ui.define([
 				var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 				oRouter.navTo("RouteView1", true);
 			}
-			
 		},
 		onInit: function (evt) {
 			// var value =	 { "value" : parseInt( data["DataToday"][0]["value"]) } 
