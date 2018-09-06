@@ -33,10 +33,14 @@ sap.ui.define([
 		},
 		onPress: function (evt) {
 			// send the response to the server ... 
+			var vModel = this.getView().getModel();
+			var vData  = vModel.getData("/");
+			
 			var oModel = new sap.ui.model.json.JSONModel();
 			var index;
 			if (evt.getSource().getId().includes("Happy") == true) {
 				index = 0;
+				vData["DataTodaySet('happy')"].value = vData["DataTodaySet('happy')"].value + 1;
 			} else if ( evt.getSource().getId().includes("OK") == true) {
 				index = 1;
 			}
@@ -49,14 +53,21 @@ sap.ui.define([
 				return;
 			}
 
+			// main model... 
+			//vModel.setData(vData)
+			//this.getView().setModel(vModel)
+	
+			// statistics 
 			data["DataToday"][index]["value"] = String( parseInt(data["DataToday"][index]["value"]) + 1 ); 
-
 			oModel.setData(	data);
 			var oVizFrame = this.getView().byId("idpiechart");
-
-			MessageToast.show(evt.getSource().getId() + " Pressed");
 			oVizFrame.setModel(oModel);
+			
 
+			// continue ... 
+			MessageToast.show(evt.getSource().getId() + " Pressed");
+			
+			//tile 
 			var value =	 { "value" : parseInt( data["DataToday"][0]["value"] )  } 
 			var happytile1 = this.getView().byId("happytile1");
 			var oModel1 = new sap.ui.model.json.JSONModel();
