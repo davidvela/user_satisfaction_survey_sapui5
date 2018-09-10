@@ -1,13 +1,13 @@
 [{
 	"status": "happy",
-	"value": "20",
+	"value": 20,
 	"Happy": "200",
 	"Ok": "30",
 	"Sad": "5"
 }, {
-	"status": "ok ",
-	"value": "5"
+	"status": "ok",
+	"value": 5
 }, {
 	"status": "sad",
-	"value": "5"
+	"value": 5
 }]

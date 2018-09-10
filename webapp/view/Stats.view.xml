@@ -7,6 +7,37 @@
 				<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<Button  icon="sap-icon://favorite" type="Accept" text="stats" press="onPress"></Button>
 						<l:HorizontalLayout class="sapUiContentPadding"></l:HorizontalLayout>
+						
+				<!-- TABLE   -->
+				<Table id="table" width="auto"
+				items="{
+					path: '/DataTodaySet',
+					sorter: {
+						path: 'status',
+						descending: false
+					}
+				}">
+				<headerToolbar>	<Toolbar><Title id="tableHeader" text="title table"/></Toolbar>	</headerToolbar>
+				<columns>
+					<Column id="nameColumn"><Text text="col1" id="nameColumnTitle"/></Column>
+					<Column id="unitNumberColumn" hAlign="End">	<Text text="col2" id="unitNumberColumnTitle"/>	</Column>
+				</columns>
+
+				<items>
+					<ColumnListItem
+						type="Navigation"
+						press="onPress">
+						<cells>
+							<ObjectIdentifier
+								title="{status}"/>
+							<ObjectNumber unit="{value}"/>
+						</cells>
+					</ColumnListItem>
+				</items>
+			</Table>
+			
+						
+						
 					</l:VerticalLayout>
 				</content>
 			</Page>

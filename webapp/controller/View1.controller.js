@@ -34,18 +34,21 @@ sap.ui.define([
 		onPress: function (evt) {
 			// send the response to the server ... 
 			var vModel = this.getView().getModel();
+			//var vModel = sap.ui.getCore().getModel();
 			var vData  = vModel.getData("/");
 			
 			var oModel = new sap.ui.model.json.JSONModel();
-			var index;
+			var index, prop; 
 			if (evt.getSource().getId().includes("Happy") == true) {
 				index = 0;
-				vData["DataTodaySet('happy')"].value = vData["DataTodaySet('happy')"].value + 1;
+				prop = "DataTodaySet('happy')"
 			} else if ( evt.getSource().getId().includes("OK") == true) {
 				index = 1;
+				prop = "DataTodaySet('ok')"
 			}
 			else if ( evt.getSource().getId().includes("Sad") == true) {
 				index = 2;
+				prop = "DataTodaySet('sad')"
 			};
 
 			if (index == undefined) {
@@ -55,8 +58,11 @@ sap.ui.define([
 
 			// main model... 
 			//vModel.setData(vData)
-			//this.getView().setModel(vModel)
-	
+			vData[prop].value =  parseInt(vData[prop].value) + 1 
+			vModel.setProperty("/"+prop,  vData[prop].value )
+			this.getView().setModel(vModel)
+			//sap.ui.getCore().setModel(vModel)
+			
 			// statistics 
 			data["DataToday"][index]["value"] = String( parseInt(data["DataToday"][index]["value"]) + 1 ); 
 			oModel.setData(	data);
@@ -169,7 +175,7 @@ sap.ui.define([
 			var that = this;
 			sap.ui.require(["sap/ui/richtexteditor/RichTextEditor"],
 				function (RTE) {
-					var oRichTextEditor = new RTE("myRTE", {
+					var oRichTextEditor = new RTE("myRTE2", {
 						editorType: sap.ui.richtexteditor.EditorType.TinyMCE4,
 						width: "100%",
 						height: "200px",
@@ -215,10 +221,8 @@ sap.ui.define([
 			oModel.read( "/kpiSet", {
 				filters: this.filters,
 				success: function(oEvent) {
-					
 					var oData = oEvent.results[0];
 					var oStatsModel = this.getView().getModel("stats");
-					
 					// oStatsModel.setProperty("/detractors", Number(oData.Detractors));
 				}.bind(this)
 			} );

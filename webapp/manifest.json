@@ -24,7 +24,6 @@
 			"version": "1.40.12"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -40,13 +39,8 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "ess.empsatsur1.view.View1",
@@ -70,17 +64,22 @@
 				"settings": {
 					"bundleName": "ess.empsatsur1.i18n.i18n"
 				}
-			}, 
+			},
 			"data": {
 				"dataSource": "data",
 				"settings": {
 					"defaultCountMode": "Inline"
 				}
-			}, 
+			},
 			"": {
-                "dataSource": "data",
-                "preload": true
-            }
+				"dataSource": "data",
+				"preload": true,
+				"settings": {
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "None",
+					"defaultOperationMode": "Server"
+				}
+			}
 		},
 		"resources": {
 			"css": [{
@@ -113,26 +112,26 @@
 				"name": "homeRoute",
 				"pattern": "home",
 				"target": ["homeTarget"]
-			}	],
+			}],
 			"targets": {
 				"TargetView1": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "View1"
-				}, 
+				},
 				"statsTarget": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "Stats"
-				}, 
+				},
 				"sel1Target": {
 					"viewType": "XML",
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "Sel1"
-				}, 
+				},
 				"homeTarget": {
 					"viewType": "XML",
 					"transition": "slide",
