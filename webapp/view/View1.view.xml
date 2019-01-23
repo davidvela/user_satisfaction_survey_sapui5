@@ -10,8 +10,6 @@
 			</headerContent>
 				<content>
 			
-			
-			
 				<!-- TABLE   -->
 				<Table id="table" width="auto"
 				items="{
@@ -47,6 +45,9 @@
 					<!-- HOW WAS YOUR DAY?    -->
 					<l:VerticalLayout class="sapUiContentPadding" width="100%">
 						<Label id="labelInForm" displayOnly="true" wrapping="true" text="Share with us how was your day =) 😎😀😊😔😡🤢💩 "/>
+						<FormattedText htmlText="{/HTML}"/>
+						<FormattedText  htmlText= "Test:  Neptune hola "/>
+						<!--<FormattedText  htmlText= "Test:  Neptune <em>SAP</em> hola "/>-->
 						<Label text="Happy:"/><Label text="{/Happy}"/>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center"></FlexBox>
 						<FlexBox height="200px" alignItems="Center" justifyContent="Center">
@@ -65,6 +66,7 @@
 						</FlexBox>
 						<MessageStrip type="Info" showIcon="true" text="Share a success story anonymously."></MessageStrip>
 						<TextArea placeholder="Enter Text... example: Today the go live was great!" growing="true" growingMaxLines="7" width="100%"/>
+						
 						<l:VerticalLayout id="idVerticalLayout" class="sapUiContentPadding" width="100%"></l:VerticalLayout>
 
 
