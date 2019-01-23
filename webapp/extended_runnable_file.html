@@ -10,7 +10,7 @@
 		</script>
 	<script src="../changes_preview.js"></script>
 
-	<script>(function(){document.addEventListener("load",function(e){if("OpaFrame"==e.target.id){var t=document.getElementById("OpaFrame").contentWindow.document,n=t.createElement("script");n.type="text/javascript",n.innerHTML="sap.ui.getCore().loadLibrary('sap.ui.fl'); jQuery.getScript('../changes_preview.js')",t.head.appendChild(n)}},!0)})()</script>
+	<script>(function(){document.addEventListener("load",function(e){if("OpaFrame"===e.target.id){var t=document.getElementById("OpaFrame").contentWindow.document,n=t.createElement("script");n.type="text/javascript",n.innerHTML="sap.ui.getCore().loadLibrary('sap.ui.fl'); jQuery.getScript('../changes_preview.js')",t.head.appendChild(n)}},!0)})()</script>
 
 	
 <script>
@@ -29,8 +29,9 @@ var sMetadataUrl = jQuery.sap.getModulePath(_sAppModulePath) + "/" + sMetadataPa
 var sMockdataBaseUrlPath = sMetadataUrl.replace(/[^/]+$/, 'mockdata');
 oMock.simulate(sMetadataUrl, { sMockdataBaseUrl : sMockdataBaseUrlPath, bGenerateMissingMockData : true });
 oMock.start();
-	jQuery(document).ready(function($) {  sap.m.MessageToast.show('Running in demo mode with mock data.', {  duration : 4000 });
-});
+	sap.ui.getCore().attachInit(function () {
+		sap.m.MessageToast.show('Running in demo mode with mock data.', {  duration : 4000 });
+	});
 }
 </script>
 
